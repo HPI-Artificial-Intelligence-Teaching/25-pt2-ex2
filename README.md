@@ -52,7 +52,7 @@ sowie das ein Stack dem ein Element angefügt wird um 1 größer wird.
 
 > Warum reichen diese beiden Axiome?
 
-**Aufgabe 1.1 (2p):** Erweitern Sie den Stack in `Stack.h` sodass er die neuen Axiome und operatoren unterstützt.
+**Aufgabe 1.1 (2p):** Erweitern Sie den Stack in `Stack.h` sodass er die neuen Axiome und operatoren unterstützt. Der Operator sollte eine Laufzeit in $O(1)$ besitzen.
 
 ## Aufgabe 2. - Arithmetrische Ausdrücke Verarbeiten
 
