@@ -13,7 +13,7 @@ public:
     // copy constructor
     // copy assignment
     // size
-    const int size()
+    int size() const
     {
         return 0;
     }
@@ -23,7 +23,7 @@ public:
         throw std::out_of_range("Index out of range");
     }
     // operator==
-    T operator==(const Set<T> &other) const
+    bool operator==(const Set<T> &other) const
     {
         return false;
     }
@@ -40,7 +40,7 @@ public:
         return *this;
     }
     // contains
-    bool contains(const T &elem)
+    bool contains(const T &elem) const
     {
         return false;
     }

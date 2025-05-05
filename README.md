@@ -4,7 +4,7 @@ Diese Übung wird sich vor allem um die Implementierung und Anwendung der eingef
 Zusätzlich können Sie für einen nontrivialen Algorithmus den Korrektheitsbeweis führen.
 
 > Hinweis: Vergessen Sie bitte nicht die C/C++ Erweiterung in VSCode zu aktivieren falls Sie den integrierten Debugger nutzen wollen.
-> Denken Sie bitte auch daran das Submodule zu initialisieren.
+> Denken Sie bitte auch daran das Submodule zu initialisieren (`git submodule update --init`).
 
 ## Aufgabe 1 - Stack Mit Linked List
 
