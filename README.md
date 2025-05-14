@@ -1,7 +1,6 @@
 # Übung 2: Abstrakte Datentypen in Konkret
 
 Diese Übung wird sich vor allem um die Implementierung und Anwendung der eingeführten Datentypen aus der VL drehen. 
-Zusätzlich können Sie für einen nontrivialen Algorithmus den Korrektheitsbeweis führen.
 
 > Hinweis: Vergessen Sie bitte nicht die C/C++ Erweiterung in VSCode zu aktivieren falls Sie den integrierten Debugger nutzen wollen.
 > Denken Sie bitte auch daran das Submodule zu initialisieren (`git submodule update --init`).
@@ -168,7 +167,7 @@ type Set<T>:
         size(empty) = 0
         contains(Set,x) = true -> size(add(Set,x)) = size(Set)
         contains(Set,x) = false -> size(add(Set,x)) = size(Set) + 1
-		∀x,y: contains(Set1,x) == contains(Set2,y) <-> Set1 == Set2
+		(∀x: contains(Set1,x) == contains(Set2,x)) <-> Set1 == Set2
 ```
 
 **Aufgabe 3.1 (4p):** Implementieren Sie in `Set.h` die `operatoren` sodass Sie die gegebenen `axiome` erfüllen. Nutzen Sie dazu erneut das Konzept einer Linked List als Speicherstruktur.
