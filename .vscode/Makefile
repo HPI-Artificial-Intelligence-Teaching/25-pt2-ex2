@@ -2,13 +2,13 @@ _CXX_CLANG := $(shell command -v clang++ 2>/dev/null)
 _CXX_GCC := $(shell command -v g++ 2>/dev/null)
 
 ifeq ($(_CXX_CLANG),)
-    ifeq ($(_CXX_GCC),)
-        $(error "Neither clang++ nor g++ found in PATH. Please install one.")
-    else
-        COMPILER = g++
-    endif
+	ifeq ($(_CXX_GCC),)
+		$(error "Neither clang++ nor g++ found in PATH. Please install one.")
+	else
+		COMPILER = g++
+	endif
 else
-    COMPILER = clang++
+	COMPILER = clang++
 endif
 
 OPTIONS = -std=c++17
@@ -18,24 +18,28 @@ TESTS=../tests
 
 EXE_SUFFIX =
 ifeq ($(findstring MINGW,$(shell uname -s)),MINGW)
-    EXE_SUFFIX = .exe
+	EXE_SUFFIX = .exe
 endif
 
 COMPILE = $(COMPILER) $(OPTIONS)
 TEST_COMPILE = $(COMPILER) $(TEST_OPTIONS)
-EXECUTABLE = $(BUILD)/main$(EXE_SUFFIX)
+REPL_EXECUTABLE = $(BUILD)/repl$(EXE_SUFFIX)
 TEST_EXECUTABLE = $(BUILD)/tests$(EXE_SUFFIX)
 RM = rm -f 
 
 SRC_DIR=../src
 OBJ_DIR=$(BUILD)/obj
 
-SOURCES = $(SRC_DIR)/main.cpp $(SRC_DIR)/grading_table.cpp $(SRC_DIR)/grading_tasks.cpp
+SOURCES = $(SRC_DIR)/grading_table.cpp $(SRC_DIR)/grading_tasks.cpp
 OBJECTS = $(SOURCES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
-all: main tests
+all: repl tests
 
-main: $(OBJECTS)
-	$(COMPILER) -o $(EXECUTABLE) $(OBJECTS)
+repl: prep 
+	$(COMPILE) $(SRC_DIR)/repl.cpp -o $(REPL_EXECUTABLE)
+ifeq ($(EXE_SUFFIX),)
+	chmod +x $(REPL_EXECUTABLE)
+endif
+	$(REPL_EXECUTABLE)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
 	$(COMPILE) -c $< -o $@
@@ -53,6 +57,6 @@ $(OBJ_DIR):
 prep:
 	mkdir -p $(BUILD)
 
-.PHONY: clean prep all main tests
+.PHONY: clean prep all repl tests
 clean:
 	rm -rf $(BUILD)

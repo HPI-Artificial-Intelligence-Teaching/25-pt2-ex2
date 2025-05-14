@@ -121,7 +121,7 @@ return Q (als string)
 
 >Hinweis: Nutzen Sie einen Stack für Zwischenergebnisse.
 
-**Aufgabe 2.3 (4p):** Implementieren sie einen [Read-Evaluate-Print-Loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) welcher Arithmetische Ausdrücke in **Infix-Notation** als Eingabe entgegen nimmt, und bei `Enter` Ausführt und das Ergebnis printed und danach auf eine erneute Eingabe wartet. 
+**Aufgabe 2.3 (4p):** Implementieren Sie einen [Read-Evaluate-Print-Loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) welcher Arithmetische Ausdrücke in **Infix-Notation** als Eingabe entgegen nimmt, und bei `Enter` Ausführt und das Ergebnis printed und danach auf eine erneute Eingabe wartet. (Sie können `make repl` benutzen um repl.cpp zu kompilieren und auszuführen.)
 
 > Denken Sie daran etwaige fehlerhafte Eingaben abzufangen damit Ihr Programm nicht abstürzt.
 
