@@ -167,7 +167,7 @@ type Set<T>:
         size(empty) = 0
         contains(Set,x) = true -> size(add(Set,x)) = size(Set)
         contains(Set,x) = false -> size(add(Set,x)) = size(Set) + 1
-		(∀x: contains(Set1,x) == contains(Set2,x)) <-> Set1 == Set2
+	(∀x: contains(Set1,x) == contains(Set2,x)) <-> Set1 == Set2
 ```
 
 **Aufgabe 3.1 (4p):** Implementieren Sie in `Set.h` die `operatoren` sodass Sie die gegebenen `axiome` erfüllen. Nutzen Sie dazu erneut das Konzept einer Linked List als Speicherstruktur.
