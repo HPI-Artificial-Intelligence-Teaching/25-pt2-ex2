@@ -51,7 +51,7 @@ sowie das ein Stack dem ein Element angefügt wird um 1 größer wird.
 
 > Warum reichen diese beiden Axiome?
 
-**Aufgabe 1.1 (2p):** Erweitern Sie den Stack in `Stack.h` sodass er die neuen Axiome und operatoren unterstützt.
+**Aufgabe 1.1 (2p):** Erweitern Sie den Stack in `Stack.h` sodass er die neuen Axiome und Operatoren unterstützt. Der Operator sollte eine Laufzeit in $\text{O}(1)$ besitzen.
 
 ## Aufgabe 2. - Arithmetrische Ausdrücke Verarbeiten
 
@@ -107,7 +107,7 @@ while tokens not empty:
 		pop(S)
 while not is_empty(S)
 	if top(S) ist "(": Fehler
-	push(Q,pop(s))
+	push(Q,pop(S))
 return Q (als string)
 ```
 
@@ -170,10 +170,10 @@ type Set<T>:
 	(∀x: contains(Set1,x) == contains(Set2,x)) <-> Set1 == Set2
 ```
 
-**Aufgabe 3.1 (4p):** Implementieren Sie in `Set.h` die `operatoren` sodass Sie die gegebenen `axiome` erfüllen. Nutzen Sie dazu erneut das Konzept einer Linked List als Speicherstruktur.
+**Aufgabe 3.1 (4p):** Implementieren Sie in `Set.h` die `Operatoren` sodass Sie die gegebenen `Axiome` erfüllen. Nutzen Sie dazu erneut das Konzept einer Linked List als Speicherstruktur.
 
 > Hinweis: Denken Sie dabei an die [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)#Rule_of_three).
 
-Implementieren sie weiterhin die beiden cpp operatoren `operator[]` und `operator==` für die `Set` Klasse (diese werden für Tests benötigt)
+Implementieren sie weiterhin die beiden cpp Operatoren `operator[]` und `operator==` für die `Set` Klasse (diese werden für Tests benötigt)
 
 **Aufgabe 3.2 (2p):** Nutzen Sie Ihre Implementierung des Sets um die binären Set-Operationen aus `set_operations.cpp` zu Vervollständigen.
