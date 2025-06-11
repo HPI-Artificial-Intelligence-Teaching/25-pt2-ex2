@@ -22,7 +22,7 @@ class Stack
         if (new_head)
         {
             auto tail = deep_copy_list(new_head->next);
-            return (new List(new_head->data, tail));
+            return (new List{new_head->data, tail}); // struct init -> {}
         }
 
         return (nullptr);
